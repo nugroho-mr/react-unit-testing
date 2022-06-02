@@ -18,7 +18,7 @@ describe('renders todo footer with todo length equals to 0', () => {
     test('not renders task count', () => {
         render(<TodoFooter todoLength={0} />)
         const footerElement = screen.queryByTestId('todo-footer-with-items')
-        expect(footerElement).not.toBeInTheDocument()
+        expect(footerElement).toBeInTheDocument()
     })
     test('renders free time message', () => {
         render(<TodoFooter todoLength={0} />)
